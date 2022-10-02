@@ -31,12 +31,43 @@ namespace FaceDirectionDetector
 
         private void BtnAnalyze_Click(object sender, EventArgs e)
         {
-            PicImg.Image = objDetect.DetectFaces(PicImg.Image);
+            var Images =  objDetect.DetectFaces(PicImg.Image);
+            this.PicImg.Image = Images.Last();
+
+            if (Images.Count  == 1)
+            {
+                this.PicFF.Image = Images[0];
+            }
+            else if(Images.Count >  1)
+            {
+                
+                this.PicFF.Image = Images[0];
+                this.PicFS.Image = Images[1];
+            }
         }
 
         private void BtnReset_Click(object sender, EventArgs e)
         {
             PicImg.Image = null;
         }
+
+        private void BtnOptions_Click(object sender, EventArgs e)
+        {
+            Face_Coordinates();
+        }
+
+        #region Debug
+        private void Face_Coordinates()
+        {
+            for (int x = 0; x < objDetect.No_Faces_Detected; x++)
+            {
+                MessageBox.Show("Face - " + (x + 1) + " :- " +
+                    " \nX :" + objDetect.Rect_X[x] +
+                    " \nY :" + objDetect.Rect_Y[x] +
+                    " \nWidth :" + objDetect.Rect_Width[x] +
+                    " \nHeight :" + objDetect.Rect_Height[x]);
+            }
+        }
+        #endregion
     }
 }

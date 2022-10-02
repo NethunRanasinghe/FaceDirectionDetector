@@ -43,3 +43,4 @@ D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirecti
 D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\obj\Debug\FaceDirectionDetector.csproj.CopyComplete
 D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\obj\Debug\FaceDirectionDetector.exe
 D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\obj\Debug\FaceDirectionDetector.pdb
+D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\bin\Debug\Cascades\haarcascade_eye.xml
