@@ -38,22 +38,22 @@
             this.LblDF = new System.Windows.Forms.Label();
             this.LblDS = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.PicExit = new System.Windows.Forms.PictureBox();
             this.PicMin = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.PicExit = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PicImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicFS)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMin)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicExit)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // PicImg
@@ -82,6 +82,7 @@
             // BtnAnalyze
             // 
             this.BtnAnalyze.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.BtnAnalyze.Enabled = false;
             this.BtnAnalyze.Font = new System.Drawing.Font("Garamond", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAnalyze.Location = new System.Drawing.Point(556, 474);
             this.BtnAnalyze.Name = "BtnAnalyze";
@@ -161,6 +162,49 @@
             this.panel1.Size = new System.Drawing.Size(898, 24);
             this.panel1.TabIndex = 6;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.Controls.Add(this.PicMin);
+            this.panel4.Location = new System.Drawing.Point(843, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(24, 24);
+            this.panel4.TabIndex = 1;
+            // 
+            // PicMin
+            // 
+            this.PicMin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PicMin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicMin.Image = global::FaceDirectionDetector.Properties.Resources.Minus;
+            this.PicMin.Location = new System.Drawing.Point(0, 0);
+            this.PicMin.Name = "PicMin";
+            this.PicMin.Size = new System.Drawing.Size(24, 24);
+            this.PicMin.TabIndex = 0;
+            this.PicMin.TabStop = false;
+            this.PicMin.Click += new System.EventHandler(this.PicMin_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.PicExit);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(874, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(24, 24);
+            this.panel3.TabIndex = 0;
+            // 
+            // PicExit
+            // 
+            this.PicExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PicExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicExit.Image = global::FaceDirectionDetector.Properties.Resources.Close;
+            this.PicExit.Location = new System.Drawing.Point(0, 0);
+            this.PicExit.Name = "PicExit";
+            this.PicExit.Size = new System.Drawing.Size(24, 24);
+            this.PicExit.TabIndex = 0;
+            this.PicExit.TabStop = false;
+            this.PicExit.Click += new System.EventHandler(this.PicExit_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -176,17 +220,6 @@
             this.panel2.Size = new System.Drawing.Size(212, 504);
             this.panel2.TabIndex = 7;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Face - 1";
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -198,48 +231,16 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Face -2";
             // 
-            // panel3
+            // label1
             // 
-            this.panel3.Controls.Add(this.PicExit);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(874, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 24);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.Controls.Add(this.PicMin);
-            this.panel4.Location = new System.Drawing.Point(843, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(24, 24);
-            this.panel4.TabIndex = 1;
-            // 
-            // PicExit
-            // 
-            this.PicExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PicExit.Image = global::FaceDirectionDetector.Properties.Resources.Close;
-            this.PicExit.Location = new System.Drawing.Point(0, 0);
-            this.PicExit.Name = "PicExit";
-            this.PicExit.Size = new System.Drawing.Size(24, 24);
-            this.PicExit.TabIndex = 0;
-            this.PicExit.TabStop = false;
-            this.PicExit.Click += new System.EventHandler(this.PicExit_Click);
-            // 
-            // PicMin
-            // 
-            this.PicMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PicMin.Image = global::FaceDirectionDetector.Properties.Resources.Minus;
-            this.PicMin.Location = new System.Drawing.Point(0, 0);
-            this.PicMin.Name = "PicMin";
-            this.PicMin.Size = new System.Drawing.Size(24, 24);
-            this.PicMin.TabIndex = 0;
-            this.PicMin.TabStop = false;
-            this.PicMin.Click += new System.EventHandler(this.PicMin_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(64, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Face - 1";
             // 
             // Main
             // 
@@ -263,12 +264,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicFS)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicMin)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicExit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PicExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMin)).EndInit();
             this.ResumeLayout(false);
 
         }

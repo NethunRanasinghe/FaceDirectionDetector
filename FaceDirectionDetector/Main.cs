@@ -29,6 +29,7 @@ namespace FaceDirectionDetector
             if (DialogResult.OK == objopenfile.ShowDialog())
             {
                 this.PicImg.Image = new Bitmap(objopenfile.FileName);
+                BtnAnalyze.Enabled = true;
             }
         }
 
@@ -59,6 +60,8 @@ namespace FaceDirectionDetector
                 this.LblDF.Text = objDetect.Face_Direction[0];
                 this.LblDS.Text = objDetect.Face_Direction[1];
             }
+
+            BtnAnalyze.Enabled = false;
         }
 
         private void BtnReset_Click(object sender, EventArgs e)
@@ -83,6 +86,8 @@ namespace FaceDirectionDetector
             LblDS.Text = "Direction";
             LblDF.Location = new Point(111, 107);
             LblDS.Location = new Point(111, 284);
+
+            BtnAnalyze.Enabled = false;
         }
 
         #region Debug
