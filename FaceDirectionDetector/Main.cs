@@ -34,11 +34,11 @@ namespace FaceDirectionDetector
             var Images =  objDetect.DetectFaces(PicImg.Image);
             this.PicImg.Image = Images.Last();
 
-            if (Images.Count  == 1)
+            if (Images.Count  == 2)
             {
                 this.PicFF.Image = Images[0];
             }
-            else if(Images.Count >  1)
+            else if(Images.Count >  2)
             {
                 
                 this.PicFF.Image = Images[0];
@@ -49,6 +49,14 @@ namespace FaceDirectionDetector
         private void BtnReset_Click(object sender, EventArgs e)
         {
             PicImg.Image = null;
+            PicFF.Image = null;
+            PicFS.Image = null;
+
+            objDetect.Rect_X.Clear();
+            objDetect.Rect_Y.Clear();
+            objDetect.Rect_Width.Clear();
+            objDetect.Rect_Height.Clear();
+            objDetect.Images_B.Clear();
         }
 
         private void BtnOptions_Click(object sender, EventArgs e)
