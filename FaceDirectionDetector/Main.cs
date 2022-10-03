@@ -66,11 +66,6 @@ namespace FaceDirectionDetector
             Reset_Everything();
         }
 
-        private void BtnOptions_Click(object sender, EventArgs e)
-        {
-            Face_Coordinates();
-        }
-
         private void Reset_Everything()
         {
             PicImg.Image = null;
@@ -82,11 +77,12 @@ namespace FaceDirectionDetector
             objDetect.Rect_Width.Clear();
             objDetect.Rect_Height.Clear();
             objDetect.Images_B.Clear();
+            objDetect.Face_Direction.Clear();
 
             LblDF.Text = "Direction";
             LblDS.Text = "Direction";
-            LblDF.Location = new Point(891, 169);
-            LblDS.Location = new Point(891, 273);
+            LblDF.Location = new Point(111, 107);
+            LblDS.Location = new Point(111, 284);
         }
 
         #region Debug
@@ -102,5 +98,20 @@ namespace FaceDirectionDetector
             }
         }
         #endregion
+
+        private void LblDF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PicExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PicMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
