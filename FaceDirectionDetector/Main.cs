@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Emgu.CV.Structure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,8 @@ namespace FaceDirectionDetector
 
         private void BtnChooseImg_Click(object sender, EventArgs e)
         {
+            Reset_Everything();
+
             OpenFileDialog objopenfile = new OpenFileDialog();
             objopenfile.Multiselect = false;
             objopenfile.Filter = "Image file (*.bmp,*.png,*.jpg,*.jpeg) | *.bmp; *.png; *.jpg; *.jpeg";
@@ -44,9 +47,31 @@ namespace FaceDirectionDetector
                 this.PicFF.Image = Images[0];
                 this.PicFS.Image = Images[1];
             }
+
+            
+            if (Images.Count == 2)
+            {
+                this.LblDF.Text = objDetect.Face_Direction[0];
+            }
+            else if (Images.Count > 2)
+            {
+
+                this.LblDF.Text = objDetect.Face_Direction[0];
+                this.LblDS.Text = objDetect.Face_Direction[1];
+            }
         }
 
         private void BtnReset_Click(object sender, EventArgs e)
+        {
+            Reset_Everything();
+        }
+
+        private void BtnOptions_Click(object sender, EventArgs e)
+        {
+            Face_Coordinates();
+        }
+
+        private void Reset_Everything()
         {
             PicImg.Image = null;
             PicFF.Image = null;
@@ -57,11 +82,11 @@ namespace FaceDirectionDetector
             objDetect.Rect_Width.Clear();
             objDetect.Rect_Height.Clear();
             objDetect.Images_B.Clear();
-        }
 
-        private void BtnOptions_Click(object sender, EventArgs e)
-        {
-            Face_Coordinates();
+            LblDF.Text = "Direction";
+            LblDS.Text = "Direction";
+            LblDF.Location = new Point(891, 169);
+            LblDS.Location = new Point(891, 273);
         }
 
         #region Debug

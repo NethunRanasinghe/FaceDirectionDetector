@@ -108,15 +108,6 @@
     <None Include="Cascades\haarcascade_frontalface4.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Cascades\haarcascade_eye.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Cascades\haarcascade_lefteye_2splits.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Cascades\haarcascade_righteye_2splits.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Cascades\lbpcascade_frontalface.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

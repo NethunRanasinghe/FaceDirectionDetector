@@ -144,6 +144,7 @@
             this.Controls.Add(this.BtnAnalyze);
             this.Controls.Add(this.BtnChooseImg);
             this.Controls.Add(this.PicImg);
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Face Direction Detector";

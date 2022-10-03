@@ -43,8 +43,5 @@ D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirecti
 D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\obj\Debug\FaceDirectionDetector.csproj.CopyComplete
 D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\obj\Debug\FaceDirectionDetector.exe
 D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\obj\Debug\FaceDirectionDetector.pdb
-D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\bin\Debug\Cascades\haarcascade_eye.xml
-D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\bin\Debug\Cascades\haarcascade_lefteye_2splits.xml
-D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\bin\Debug\Cascades\haarcascade_righteye_2splits.xml
 D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\bin\Debug\lbfmodel.yaml
 D:\Other\Projects\Fiverr\C#\.Net Framework\Git\FaceDirectionDetector\FaceDirectionDetector\bin\Debug\Cascades\lbpcascade_frontalface.xml
